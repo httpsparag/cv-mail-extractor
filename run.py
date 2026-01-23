@@ -76,7 +76,7 @@ def main():
     
     try:
         if sys.platform == "win32":
-            os.system(f'"{python_exe}" "{app_file}"')
+            subprocess.run([str(python_exe), str(app_file)])
         else:
             subprocess.run([str(python_exe), str(app_file)])
     except KeyboardInterrupt:
